@@ -353,7 +353,7 @@ input{
   background: #FFFFFF;
   border-radius: 20px;
   width: 1000px;
-  height: 350px;
+  /* height: 350px; */
   padding: 2rem;
   margin-top: 2rem;
 }
@@ -390,8 +390,8 @@ input{
 }
 
 .lgstyle{
-  width: 100%;
-  height: 19px;
+  /* width: 100%; */
+  /* height: 19px; */
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;

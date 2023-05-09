@@ -21,22 +21,34 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend
-)
+);
 
 function LineGraph() {
     const data =  {
         labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
         datasets: [{
-            data: [150, 450, 150, 370],
-            backgroundColor: 'white',
-            border: 'none',
-        }]
-    }
+            data: [150, 470, 150, 370, 200],
+            borderColor: '#9BDD7C',
+            tension: 0.5,
+        },
+        {
+            data: [200, 370, 250, 170, 200],
+            borderColor: '#E9A0A0',
+            tension: 0.5,        
+    }],
+    };
     const options={
+        maintainAspectRatio: false,
         plugins:{
         legend:{
             display: false,
         },
+        scales:{
+            y:{
+                beginAtZero: true,
+                min: 0,
+            }    
+        }
     },
     };
   return (
@@ -57,7 +69,12 @@ function LineGraph() {
                     }}/><div className='userlg'>User</div></div>
             </div>
         </div>
-        <div><Line className="lgstyle"
+        <div style={{
+            width: '95%',
+            height: '220px',
+            padding: '1rem',
+            marginTop: '1rem',
+        }}><Line 
             data={data}
             options={options}
         ></Line>
